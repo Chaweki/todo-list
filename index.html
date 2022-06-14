@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rest.css">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="app.js"></script>
+  
+  <title>Todo app</title>
+
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>todo</h1>
+    <img src="images/icon-moon.svg" alt="">
+  </div>
+  
+  <div class="todo newtodo card">
+    <span class='checkbox' ></span>
+    <input type="text" placeholder="Create a new place todo">
+  </div>
+  <div class="card">
+    <ul>
+      <li class="todo checkbox checked"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
+      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
+      <li class="todo checkbox">eating foo <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
+      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
+      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
+
+
+    </ul>
+
+
+  <div class="list-footer todo">
+  <p><!-- Add dynamic number --> items left </p>
+  <button>Clear Completed</button> </div>
+  </div>
+  <div class="card todo footer">
+    <button>All</button>
+    <button>Active </button>
+    <button>Completed</button>
+  </div>
+  
+
+  
+
+  <p class="drag">Drag and drop to reorder list  </p> 
+
+</div>
+
+</body>
+</html>

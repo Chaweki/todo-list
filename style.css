@@ -1,0 +1,142 @@
+:root{
+    --text-color: #fff;
+    --text-color-grey:#43455E;
+    --checkbox: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%)) /*linear-gradient( to )*/;
+    --bg:no-repeat url('./images/bg-mobile-dark.jpg'),hsl(235, 21%, 11%);
+
+
+
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    background: var(--bg);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin: 10% 10%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 10% 0;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase ;
+    color: var(--text-color);
+}
+.todo{
+    
+    font-size: 1rem;
+    height: 3em;
+    padding: 1rem;
+    color: var(--text-color);
+}
+.card{
+    border-radius: 5px;
+    background: hsl(235, 24%, 19%);
+    margin-bottom: 1rem;
+    
+}
+.newtodo{
+    
+    display: flex;
+    align-items: center;
+}
+.newtodo input[type=text]{
+    all: unset;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    
+}
+ul .todo{
+    border-bottom: 1px solid var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    
+    
+}
+
+.checkbox::before{
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 2px 10px;
+    margin-right: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+
+}
+.cross{
+    
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 10px;
+}
+.checked{
+    text-decoration: line-through;
+    color: var(--text-color-grey);
+
+}
+.checked::before{
+    content: url(images/icon-check.svg);
+    padding: 2px 6px;
+    background:var(--checkbox)
+}
+
+.list-footer{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-color-grey);
+}
+
+.footer{
+    color: var(--text-color-grey);
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.drag{
+    text-align: center;
+    color: var(--text-color-grey);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+.fade{
+    animation: fade 10s ;
+}
+.none{
+    display: none;
+}
+@keyframes fade {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100%);
+        height:  0;
+    }
+
+}
