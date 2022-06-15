@@ -18,7 +18,7 @@
 <div class="container">
   <div class="header">
     <h1>todo</h1>
-    <img src="images/icon-moon.svg" alt="">
+    <span id="theme" class="dark"></span>
   </div>
   
   <div class="todo newtodo card">
@@ -38,13 +38,13 @@
 
 
   <div class="list-footer todo">
-  <p><!-- Add dynamic number --> items left </p>
-  <button>Clear Completed</button> </div>
+  <p id='items' data-items="5"><!-- Add dynamic number --> items left </p>
+  <button id="clear">Clear Completed</button> </div>
   </div>
   <div class="card todo footer">
-    <button>All</button>
-    <button>Active </button>
-    <button>Completed</button>
+    <button id="all">All</button>
+    <button id="active">Active </button>
+    <button id="completed">Completed</button>
   </div>
   
 
