@@ -15,11 +15,12 @@ const THEME = {
     "--bg-card":"#fff"}
 
 }
+// set the variable of the theme given in root
 let setTheme=function(theme){
     debugger
     let root = document.querySelector(':root')
     for( let v in theme ){
-        console.log(v,theme[v])
+       
         root.style.setProperty(v,theme[v])
     }
 
@@ -49,6 +50,12 @@ window.addEventListener("DOMContentLoaded",()=>{
         checkbox.classList.remove('fade')
   
     }
+    let selected = function(eliment){
+        let select = document.querySelector('.selected')
+        select.classList.remove('selected')
+        eliment.classList.add('selected')
+
+    }
 // add event to checkbox to mark elements as done 
     let checkboxes = document.querySelectorAll('.checkbox')
     
@@ -69,6 +76,7 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 let completed = document.getElementById('completed')
 completed.addEventListener('click',()=>{
+    selected(completed)
     let checkboxes = document.querySelectorAll('ul .checkbox')
     checkboxes.forEach(checkbox => {
         if(!checkbox.classList.contains('checked')){
@@ -81,6 +89,7 @@ completed.addEventListener('click',()=>{
   
 let active = document.getElementById('active')
 active.addEventListener('click',()=>{
+    selected(active)
     let checkboxes = document.querySelectorAll('ul .checkbox')
     checkboxes.forEach(checkbox => {
         if(checkbox.classList.contains('checked')){
@@ -92,6 +101,7 @@ active.addEventListener('click',()=>{
 })
 let all = document.getElementById('all')
 all.addEventListener('click',()=>{
+    selected(all)
     let checkboxes = document.querySelectorAll('ul .checkbox')
     checkboxes.forEach(checkbox => {
         
@@ -118,10 +128,14 @@ theme.addEventListener('click',()=>{
     
     if(theme.classList.contains('dark')){
         setTheme(THEME['light'])
+        theme.classList.remove('dark')
+        theme.classList.add('light')
 
 
     } else if(theme.classList.contains('light')){
         setTheme(THEME['dark'])
+        theme.classList.remove('light')
+        theme.classList.add('dark')
 
 
     }
