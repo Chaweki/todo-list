@@ -13,15 +13,21 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     background: var(--bg);
-    display: flex;
-    justify-self: center;
-    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: background .3s;
 }
 
 .container{
     width: 100%;
+    max-width: 536px;
+    min-width: 320px;
     height: 100%;
-    margin: 10% 10%;
+    position: absolute;
+    padding: 26px 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .header{
     display: flex;
@@ -164,6 +170,15 @@ ul .todo{
        /* height:  0;*/
     }
 
+}
+
+@media screen and (min-width:380px) {
+    .desktop-light{
+        background: no-repeat url('./images/bg-desktop-light.jpg'),hsl(0, 0%, 98%);
+    }
+    .desktop-dark{
+        background: no-repeat url("./images/bg-desktop-dark.jpg"),hsl(235, 21%, 11%);
+    }
 }
 
 

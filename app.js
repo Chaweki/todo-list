@@ -17,7 +17,7 @@ const THEME = {
 }
 // set the variable of the theme given in root
 let setTheme=function(theme){
-    debugger
+    
     let root = document.querySelector(':root')
     for( let v in theme ){
        
@@ -130,14 +130,16 @@ theme.addEventListener('click',()=>{
         setTheme(THEME['light'])
         theme.classList.remove('dark')
         theme.classList.add('light')
+        document.body.classList.remove('desktop-dark')
+        document.body.classList.add('desktop-light')
 
 
     } else if(theme.classList.contains('light')){
         setTheme(THEME['dark'])
         theme.classList.remove('light')
+        document.body.classList.remove('desktop-light')
+        document.body.classList.add('desktop-dark')
         theme.classList.add('dark')
-
-
     }
 })
 
