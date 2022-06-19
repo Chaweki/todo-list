@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <script src="app.js"></script>
+  
   
   <title>Todo app</title>
 
@@ -26,13 +26,8 @@
     <input type="text" placeholder="Create a new place todo">
   </div>
   <div class="card">
-    <ul>
-      <li class="todo checkbox checked" draggable="true"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
-      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
-      <li class="todo checkbox">eating foo <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
-      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
-      <li class="todo checkbox"> eating food <span class="cross"><img src="images/icon-cross.svg" alt=""></span></li>
-
+    <ul id='sort1' data-sortable=".task">
+      
 
     </ul>
 
@@ -53,6 +48,9 @@
   <p class="drag">Drag and drop to reorder list  </p> 
 
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script src="fetchdata.js"></script>
+<script src="app.js"></script>
+<script src="sorter.js"></script>
 </body>
 </html>

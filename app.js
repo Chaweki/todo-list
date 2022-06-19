@@ -25,8 +25,14 @@ let setTheme=function(theme){
     }
 
 }
-window.addEventListener("DOMContentLoaded",()=>{
+const check = function (e) {
+    e.stopPropagation()
+    e.preventDefault()
+    this.classList.toggle('checked')
+}
+let app = async function () {
     //remove element from parent node 
+    await getData('https://jsonplaceholder.typicode.com/todos')
     let remove = function(){
         this.classList.add('none')
         this.parentElement.removeChild(this)
@@ -56,15 +62,12 @@ window.addEventListener("DOMContentLoaded",()=>{
         eliment.classList.add('selected')
 
     }
+    
 // add event to checkbox to mark elements as done 
     let checkboxes = document.querySelectorAll('.checkbox')
     
     checkboxes.forEach(checkbox =>{
-        checkbox.addEventListener('click',(e) => {
-            e.stopPropagation()
-            e.preventDefault()
-            checkbox.classList.toggle('checked')
-        })
+        checkbox.addEventListener('click',check)
     })
 //add event to the cross icon to remove elements 
     let crosses = document.querySelectorAll('.cross')
@@ -143,6 +146,9 @@ theme.addEventListener('click',()=>{
     }
 })
 
+let sortable = new Sortable(document.getElementById('sort1'))
 
-})
+}
+
+app()
 
