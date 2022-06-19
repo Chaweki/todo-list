@@ -22,7 +22,7 @@ const getData = async function (url){
             li.setAttribute('data-position',(task.id-1))
             li.setAttribute('data-id',task.id)
              
-            li.innerHTML=` ${task.title} <span class="cross"><img src="images/icon-cross.svg" alt=""></span>`
+            li.innerHTML=` ${task.title}<span class="cross"><img src="images/icon-cross.svg" alt=""></span>`
 
             ul.appendChild(li)
         });       
